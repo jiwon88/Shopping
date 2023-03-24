@@ -1,0 +1,49 @@
+<!--
+    DOM은 Document Object Model(문서 객체 모델) 이다.
+    
+    HTML
+        Html Tag -> JavaScript Node
+        변환
+    Node -> EventTarget 를 상속한다.
+    모든 노드는 이벤트가 발생할 수 있다.
+    
+    >>Document, Element, Text,...-> Node -> EventTarget
+
+    HTMLInputElement, HTMLDivElement,...-> HTMLElement -> Element
+    APLs node
+    
+    layout paint composition
+    
+    1. HTML 파일과 CSS 파일을 파싱해서 각각 Tree를 만든다. (Parsing)
+    2. 두 Tree를 결합하여 Rendering Tree를 만든다. (Style)
+    3. Rendering Tree에서 각 노드의 위치와 크기를 계산한다. (Layout)
+    4. 계산된 값을 이용해 각 노드를 화면상의 실제 픽셀로 변환하고, 레이어를 만든다. (Paint)
+    5. 레이어를 합성하여 실제 화면에 나타낸다. (Composite)
+
+    Document.querySelector()는 처음에 찾아진Element를 return한다. 일치하는 요소가 없으면 null을 반환합니다.
+    https://developer.mozilla.org/ko/docs/Web/API/Document/querySelector
+    
+    그전에는 Document.getElementById()를 사용했다. 주어진 문자열과 일치하는 id 속성을 가진 요소를 찾고, 
+    이를 나타내는 Element 객체를 반환합니다. ID는 문서 내에서 유일해야 하기 때문에 특정 요소를 빠르게 찾을 때 유용합니다.
+    -대신에 일일히 수정해야해서 요즘에는 Document.querySelector()을 사용한다.
+    Document.querySelector('') <-class 라면
+    Document.querySelector('#') <-id 라면
+
+    Document.querySelectorAll() <- 문서안에 있는 태그 전부 다 가져오는 것
+    Document.querySelectorAll('image') <- 이미지 태그안에 있는 전부 다 가져옴
+    
+    append(), appendChild() <- 새로운 자식요소를 추가할때 쓰임 append는 최근에 나온거고 appendChild는 원래 있던걸로 appendChild를 쓴다.
+
+    insertBefore() <- 노드를 어떤래퍼런스 노드전에 추가해준다.
+    ex) parentNode.insertBefore(newNode, referenceNode) <-newNode를 referenceNode 이전에 추가해 준다.
+
+    section.innerHTML <-동적으로 업뎃 가능
+    $0.innerHTML 섹션의 모든태그들이 다나옴
+
+    `` <-이걸 사용하면 문자열을 띄워쓰기랑 엔터키 가능
+
+    section.removeChild <-child를 뺄수도 있다.
+
+    insertBefore() 인터페이스의 메소드는 지정된 부모 노드 의 자식으로 참조 노드Node 앞에 노드를 삽입합니다 .
+
+-->
